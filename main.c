@@ -96,7 +96,7 @@ static void set_motors(struct gyro_vals vals, struct pid pids[3],
     }
 }
 
-int main()
+int main(void)
 {
     struct target t;
     target_init(&t);

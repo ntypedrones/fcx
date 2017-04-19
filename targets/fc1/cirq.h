@@ -91,9 +91,9 @@ static inline volatile unsigned char* cirq_inc(const struct cirq* const c,
 static inline void cirq_vol_memcpy(volatile void* const dst,
     const volatile void* const src, const size_t size)
 {
-    unsigned char* d = (unsigned char*)dst;
-    unsigned char* s = (unsigned char*)src;
-    unsigned char* const l = d + size;
+    volatile unsigned char* d = (volatile unsigned char*)dst;
+    const volatile unsigned char* s = (const volatile unsigned char*)src;
+    volatile unsigned char* const l = d + size;
     while (d < l)
     {
         *d = *s;

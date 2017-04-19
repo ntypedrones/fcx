@@ -51,7 +51,7 @@ RM_ON_CLEAN := $(TARGET) $(DEPDIR) $(BUILDDIR)
 -include $(MODULES:=/module.mk)
 
 CFLAGS += -g3 -O2 -Werror -Wall -Wextra -Wpedantic -Wconversion -Wcast-align
-CFALGS += -Wint-to-pointer-cast -Wstrict-prototypes -Wcast-qual -Wundef
+CFLAGS += -Wint-to-pointer-cast -Wstrict-prototypes -Wcast-qual -Wundef
 CFLAGS += -Wstrict-overflow=5 -Wwrite-strings -Wshadow -Wfloat-equal
 CFLAGS += -pedantic-errors -std=c11 $(IDIRS:%=-I%/) $(DEFINES:%=-D%)
 LDFLAGS += -g3 -O2
